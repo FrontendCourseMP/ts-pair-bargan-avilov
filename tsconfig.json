@@ -1,11 +1,13 @@
 {
   "compilerOptions": {
+    "target": "es6",
     "module": "esnext",
-    "outDir": "./dist",
-    "lib": ["es2016", "DOM"],
-    "allowJs": false
-  },
-  "exclude": [
-    "node_modules"
-  ]
+    "lib": ["ESNext", "DOM"],
+    "outDir": "dist",
+
+    /* Bundler mode */
+    // "moduleResolution": "bundler",
+    // "verbatimModuleSyntax": true,
+    "moduleDetection": "force",
+  }
 }
