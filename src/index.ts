@@ -1,4 +1,3 @@
-import checkSequence from "./utils/checkSequence.js";
+import { handlerTask2 } from "./task2.js";
 
-
-console.log(checkSequence('()[]'))
+handlerTask2()
