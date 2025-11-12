@@ -17,6 +17,25 @@ class Stack <T> {
   }
 }
 
+function checkSequence(seq: string) {
+  const r = new Stack<string>()
+
+  const brackets = {
+    '(': ')',
+    '[': ']',
+    '{': '}'
+  }
+  
+
+  for (const c of seq) {
+    if (Object.keys(brackets).includes(c)) {
+      r.add(c)
+    }
+  }
+
+  return r.size() === 0
+}
+
 
 form.addEventListener("submit", (ev) => {
   ev.preventDefault()

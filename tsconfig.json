@@ -1,7 +1,8 @@
 {
   "compilerOptions": {
-    "module": "commonjs",
+    "module": "esnext",
     "outDir": "./dist",
+    "lib": ["es2016", "DOM"],
     "allowJs": false
   },
   "exclude": [
