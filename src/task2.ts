@@ -1,4 +1,6 @@
 const form = document.querySelector('.formTask2') as HTMLFormElement
+const inputForm = form.querySelector('.formTask2-input') as HTMLInputElement
+const outputFormn = form.querySelector('.formOutput') as HTMLOutputElement
 
 class Stack <T> {
   private readonly elements: T[]
@@ -31,8 +33,16 @@ function checkSequence(seq: string) {
     if (Object.keys(brackets).includes(c)) {
       r.add(c)
     }
+    else if (r.size() === 0) {
+      return false
+    }
+    else {
+      const el = r.remove()
+      if (el !== brackets[el]) {
+        return false
+      }
+    }
   }
-
   return r.size() === 0
 }
 
