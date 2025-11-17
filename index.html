@@ -1,26 +1,30 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script type="module" src="./dist/index.js" defer></script>
-  </head>
-  <body>
-    <section>
-      <h2>Опоздание поезда</h2>
-      <form>
-        <input type="range" min="0" max="23" class="data-dest" name="" id="" placeholder="Час прибытия по расписанию" >
-        <input type="range" min="0" max="23" class="data-delta" name="" id="" placeholder="Количество часов опаздания">
-      </form>
-      <textarea name="" id="" class="output"></textarea>
-    </section>
-    <section>
-      <form class="formTask2">
-        <input class="formTask2-input" type="text">
-        <button>Проверить</button>
-        <output class="formOutput"></output>
-      </form>
-    </section>
-  </body>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script type="module" src="./dist/index.js" defer></script>
+</head>
+
+<body>
+  <section>
+    <h2>Опоздание поезда</h2>
+    <form>
+      <input type="range" min="0" max="23" class="data-dest" placeholder="Час прибытия по расписанию">
+      <input type="range" min="0" max="23" class="data-delta" placeholder="Количество часов опаздания">
+      <output name="arrival"></output>
+    </form>
+  </section>
+  <section>
+    <h2>Скобочная последовательность</h2>
+    <form class="formTask2">
+      <input class="formTask2-input" type="text" pattern="^[\(\)\[\]\{\}]+$" required>
+      <button>Проверить</button>
+      <output class="formOutput" name="result"></output>
+    </form>
+  </section>
+</body>
+
 </html>
